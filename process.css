@@ -1,0 +1,60 @@
+#inside-process{
+  background: var(--background-primary1);
+  color: #fff;
+  height: 75vh;
+  position: relative;
+}
+
+#inside-process:before{
+  content: "";
+  background: url('process.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#inside-process .inside-showcase-content .inside-show-heading h2{
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+#inside-process .inside-showcase-content .inside-show-descrip p{
+  font-size: 1.3rem;
+}
+
+/* process-description */
+#pro-des{
+  padding: 5rem 6rem;
+  background: rgb(228, 225, 225);
+  /* background: url('dot.jpg'); */
+}
+
+/* process */
+#process .process-container{
+  background: url('dot.jpg');
+}
+
+#process .process-container .process-image,
+#process .process-container .process-content{
+  flex: 1;
+}
+
+#process .process-container .process-content .pro-one{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0rem 0rem 0rem 5rem;
+}
+
+#process .process-container .process-content p{
+  width: 30rem;
+  font-size: 1.2rem;
+}
+
+

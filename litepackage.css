@@ -1,0 +1,19 @@
+/* inside-lite-packgae-showcase */
+#lite-showcase{
+    background: var(--background-purple);
+    color: #fff;
+    height: 85vh;
+    position: relative;
+}
+
+#lite-showcase:before{
+    content: "";
+    background: url('micro-showcase.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+ 

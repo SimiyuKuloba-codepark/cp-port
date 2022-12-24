@@ -1,0 +1,174 @@
+/* package-navabr */
+#package-navbar .package-navbar-content{
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    text-align: left;
+    padding: 0rem .5rem;
+}
+
+#package-navbar .package-navbar-content .cp-logo .logo{
+    height: 100%;
+    width: 200px;
+    border-right: 2px solid black;
+}
+
+#package-navbar .package-navbar-content .package-menu ul{
+    display: flex;
+}
+  
+#package-navbar .package-navbar-content .package-menu ul li{
+    list-style: none;
+    padding-right: 1.5rem;
+}
+  
+#package-navbar .package-navbar-content .package-menu ul li a{
+    color: black;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#package-navbar .package-navbar-content .package-menu ul li .active-pack{
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 1.3rem;
+}
+
+  
+#package-navbar .package-navbar-content .package-menu ul li a:hover{
+    /* color: var(--primary-light-color); */
+    border-bottom: 2px solid black;
+}
+
+/* pack-button */
+.package-btn{
+    /* background: var(--primary-light-color); */
+    border: 1px solid var(--primary-light-color);
+    padding: .2rem .7rem;
+    color: var(--primary-light-color);
+}
+  
+.package-btn:hover{
+cursor: pointer;
+background: var(--primary-light-color);
+text-decoration: none !important;
+border-bottom: none !important;
+color: #fff !important;
+}
+
+/* inside-packgae-showcase */
+.inside-package-showcase{
+    margin-bottom: auto;
+}
+.inside-package-showcase .inside-package-showcase-content{
+    display: flex;
+    flex-direction: column;
+    padding: 23rem 5rem 5rem 5rem;
+}
+
+/* package-detailed-card */
+.inside-package-showcase .inside-package-showcase-content #package-card{
+    background: #fff;
+    padding: 1rem 3rem;
+    color: #000;
+    box-shadow: 8px 8px 40px rgb(95, 95, 95);
+}
+
+.inside-package-showcase .inside-package-showcase-content #package-card h3{
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+
+.inside-package-showcase .inside-package-showcase-content #package-card .card-detail ul{
+    margin-left: 1rem;
+}
+
+.inside-package-showcase .inside-package-showcase-content #package-card .card-detail .card-price{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.inside-package-showcase .inside-package-showcase-content #package-card .card-detail .card-price .card-amount{
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.inside-package-showcase .inside-package-showcase-content #package-card .card-detail .card-price a{
+    background: var(--primary-light-color);
+    padding: .5rem 2rem;
+    color: #fff;
+    font-weight: 0;
+}
+
+/* overview */
+#overview{
+    padding-top: 27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#overview h1{
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+#overview p{
+    padding: 0rem 15rem;
+}
+
+/* features */
+#features{
+    padding: 5rem 0rem;
+    text-align: center;
+}
+
+#features .features-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#features .features-container .features-row{
+    display: flex;
+}
+
+#features .features-container .features-row .feature{
+    margin: 3rem;
+}
+
+#features .features-container .features-row .feature i{
+    font-size: 3rem;
+}
+
+/* pack-boxes */
+#micro-boxes{
+    text-align: center;
+}
+
+#micro-boxes .micro-box-container{
+    display: flex;
+}
+
+#micro-boxes .micro-box-container .micro-box{
+    padding: 2rem;
+}
+
+#micro-boxes .micro-box-container .micro-box .micro-box-image{
+    padding-bottom: 2rem;
+}

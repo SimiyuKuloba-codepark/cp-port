@@ -1,0 +1,17 @@
+#register{
+    /* background-image: linear-gradient(to right, rgba(255, 0, 128, 0.466), rgba(0, 255, 55, 0.466)); */
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+  
+#showcase:before{
+    content: "";
+    background: url('register/reg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
