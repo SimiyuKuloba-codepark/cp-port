@@ -93,3 +93,18 @@
   background: var(--primary-dark-color) !important;
 }
 
+/* ALERTS*/
+#contact-form .alert{
+  font-size: .7rem;
+  padding: .3rem .5rem;
+  color: #fff;
+  text-align: center;
+  background: rgb(245, 84, 84) !important;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+/* priority-colors */
+#contact-form .error{ background: rgb(245, 84, 84) !important; z-index: 2;}
+
+#contact-form .success{ background: #28a745 !important; z-index: 2; }

@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020 Simiyu Kuloba <simiyukuloba1@gmail.com>
  * @author Simiyu Kuloba
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 // Scroll Function

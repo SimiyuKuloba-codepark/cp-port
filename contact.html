@@ -1,149 +1,3 @@
-<!--  -->
-<?php
-
-  require('config.php');
-  require('db.php');
-
-  // check for submit
-  if(filter_has_var(INPUT_POST, 'submit')){
-    // get form data
-    $name = mysqli_real_escape_string($conn, $_POST['name'])  ;
-    $email = mysqli_real_escape_string($conn, $_POST['data'])  ;
-    $phone = mysqli_real_escape_string($conn, $_POST['phone'])  ;
-    $message = mysqli_real_escape_string($conn, $_POST['message'])  ;
-
-    // Check Req Fields
-    if(!empty($email) && !empty($name)  && !empty($phone) && !empty($message)){
-      // passed
-      // check email 
-      if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-        // failed
-        $msg = 'Please use valid email!';
-      }else{
-        // passed
-        $query = "INSERT INTO messages (name, email, phone, message) VALUES('$name', '$email', '$phone', '$message')" ;
-
-        if(mysqli_query($conn, $query)){
-          header('Location: '.THANKS_URL. '');
-        } else{
-          echo 'ERROR: '. mysqli_error($conn);
-        }
-      }     
-    }
-  }else{
-    // failed
-    $msg = 'Please fill in all fields!';
-
-    $msg = "<p class='red'>$msg</p>";
-
-  }
-      
-
-  // message vars
-  $msg = '';
-
-  if(filter_has_var(INPUT_POST, 'submit')){
-      // Get form Data
-    $name = htmlspecialchars($_POST['name']);
-
-    $email = htmlspecialchars($_POST['data']);
-
-    $phone = htmlspecialchars($_POST['phone']);
-
-    $message = htmlspecialchars($_POST['message']);
-
-    // Check Req Fields
-    if(!empty($email) && !empty($name)  && !empty($phone) && !empty($message)){
-      // passed
-      // check email 
-      if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-        // failed
-        $msg = 'Please use valid email!';
-
-        $msg = "<p class='red'>$msg</p>";
-
-      }else{
-        // passed
-        // recipient email
-        
-        $toEmail = 'simiyukuloba@codepark.co.ke';
-
-        $subject = 'Site Inquiry from '.$name;
-
-        $body = '<table style = "margin-left: auto; margin-right: auto; background: #fff; border: 2px solid #1E90FF; border-radius: 2rem;">
-        <tr>
-            <td style="padding:1rem 2rem 1rem 2rem">
-                <hr>
-                <h2 style="text-align: center; color: #1E90FF; font-size: 2.5rem">Inquiries</h2>
-                <p style="text-align: center; font-size: 1.2rem;">Halo Simiyu! You have a new Inquiry from ' .$name. '</p>
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding:0rem 4rem 0rem 4rem">
-                <h2 style="text-align: left;">Visitors Name</h2>
-                <p style="text-align: left;">' .$name. ' </p>
-            </td>
-        </tr>
-
-        <tr>
-            <td style="padding:0rem 4rem 0rem 4rem">
-                <h2 style="text-align: left;">Email</h2>
-                <p style="text-align: left;">' .$email. ' </p>
-            </td>
-        </tr>
-
-        <tr>
-            <td style="padding:0rem 4rem 0rem 4rem">
-                <h2 style="text-align: left;">Phone Number</h2>
-                <p style="text-align: left;">' .$phone. ' </p>
-            </td>
-        </tr>
- 
-        <tr>
-            <td style="padding:0rem 4rem 0rem 4rem">
-                <h2 style="text-align: left;">Message/Inquiry</h2>
-                <p style="text-align: justify;">' .$message. ' </p>
-            </td>
-        </tr>
-
-        <tr>
-            <td style="padding:0rem 2rem 1rem 2rem;  color: #1E90FF;">
-                <hr>
-                <p style="text-align: center;">Code Park Company LTD | A creative agency in Nairobi</p>
-                <hr>
-            </td>
-        </tr>
-    
-    </table>';
-
-        // Email Headers
-        $headers = "From: " .$name. "<".$email.">". "\r\n";
-        $headers .= "MIME-Version: 1.0" ."\r\n";
-        $headers .= "Content-Type:text/html; charset=UTF-8" ."\r\n";
-
-        // Additional headers
-        // $headers .= "From: " .$name. "<".$email.">". "\r\n";
-
-        if(mail($toEmail, $subject, $body, $headers)){
-          // email sent
-          $msg = 'Your Email has been sent';
-
-          $msg = "<p class='red'>$msg</p>";
-
-        } else{
-          // failed
-          $msg = 'Your email was not sent';
-        }
-
-      }
-    } else{
-      // failed
-      $msg = 'Please fill in all fields!';
-    }
-  }
- 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,16 +10,11 @@
   <script src="https://kit.fontawesome.com/f2b674ca10.js" crossorigin="anonymous"></script>
   <!-- google-fonts-link -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">  
-  <!-- main-stylesheet-css -->
-  <link rel="stylesheet" href="style.css">
-  <!-- home-page-stylesheet-css -->
-  <link rel="stylesheet" href="home.css">
   <!-- contact-page-stylesheet-css -->
   <link rel="stylesheet" href="contact.css">
-  <!-- orderform-css -->
-  <link rel="stylesheet" href="orderform.css">
-  <!-- php style -->
-  <link rel='stylesheet' type='text/css' href='style.php' />
+  <!-- main-stylesheet-css -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- moble-tablets-stylesheet -->
   <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
 </head>
@@ -243,7 +92,7 @@
         </div>
         <div class="our-location location-item">
           <i class="fas fa-city"></i>
-          <p>Code Park Comapny Limited</p>
+          <p>Code Park Company Limited</p>
           <p>Nairobi, Kenya</p>
         </div>
         <div class="our-phone location-item">
@@ -265,33 +114,34 @@
   <div id="message">
     <div class="message-content flex-column-center">
       <div class="message-heading">
-        <h2 id="not"></h2>
         <h2 class="heading-3">TALK TO US</h2>
         <div class="heading-border">
           <div class="border-bottom"></div>
         </div>
       </div>
       <p>Contact us with any questions you may have or to discuss how we can help with your project.</p>
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contact-form" method="post">
+      <form action="" id="contact-form" method="post">
         <div class="form-content">
           <label for="name">Name:</label>
-          <input id="name" type="text" name="name" placeholder="John Doe" value="<?php echo isset($_POST['name']) ? $name : ''; ?>" required> 
+          <input id="name" type="text" name="name" placeholder="John Doe"> 
         </div>
         <div class="form-content">
           <label for="email">Email:</label>
-          <input id="email" type="email" name="data" placeholder="john@doe.com" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" required>
+          <input id="email" type="email" name="data" placeholder="john@doe.com">
         </div>
         <div class="form-content">
           <label for="phone">Phone:</label>
-          <input id="phone" type="number" name="phone" placeholder="(+254) 123 456789" value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>" required>
+          <input id="phone" type="number" name="phone" placeholder="(+254) 123 456789">
         </div>
         <div class="form-content">
           <label for="message">Your message</label>
-          <textarea name="message" id="" cols="25" rows="10" placeholder="Type your message..." required><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+          <textarea name="message" id="" cols="25" rows="10" placeholder="Type your message..."></textarea>
         </div>
         <div class="form-content">
           <input type="submit" name="submit" id="submit" value="SUBMIT">
         </div>
+        <div id="not"></div>
+
       </form>
     </div>
   </div>
@@ -321,5 +171,6 @@
     </div>
   </div>
 <script src="app.js"></script>
+<script src="app5.js"></script>
 </body>
 </html>

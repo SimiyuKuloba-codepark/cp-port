@@ -321,3 +321,19 @@ img{
 #footer .foot-two a img{
   width: 400px;
 }
+
+/* ALERTS*/
+.alert{
+  font-size: .7rem;
+  padding: .3rem .5rem;
+  color: #fff !important;
+  text-align: center;
+  background: rgb(245, 84, 84) !important;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+/* priority-colors */
+.error{ background: rgb(245, 84, 84) !important; z-index: 2;}
+
+.success{ background: #28a745 !important; z-index: 2; }
