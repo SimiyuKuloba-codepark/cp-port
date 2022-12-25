@@ -78,7 +78,7 @@ if(filter_has_var(INPUT_POST, 'submit')){
             <div class="order-menu">
                 <ul class="flex-row-center">
                     <li title="home"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li title="contact-us"><a href="contact.php"><i class="fas fa-mobile-alt"></i></a></li>
+                    <li title="contact-us"><a href="contact.html"><i class="fas fa-mobile-alt"></i></a></li>
                 </ul>
             </div>
         </div>
