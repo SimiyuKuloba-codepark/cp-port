@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us I Codepark</title>
+  <!-- favicon -->
+  <link rel="icon" href="favicon.jpg">
+  <!-- fontawesome-icon-links -->
+  <script src="https://kit.fontawesome.com/f2b674ca10.js" crossorigin="anonymous"></script>
+  <!-- google-fonts-link -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">  
+  <!-- contact-page-stylesheet-css -->
+  <link rel="stylesheet" href="contact.css">
+  <!-- main-stylesheet-css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- moble-tablets-stylesheet -->
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
+</head>
+<body>
+  <!-- cd-navbar -->
+  <navbar id="cp-navbar">
+    <div class="cp-navbar-content">
+      <div class="cp-logo flex-row-center">
+        <a href="index.html"><img src="code-park-full-web1.png" alt="codepark logo" class="logo" /></a>
+      </div>
+      <div class="cp-menu">
+        <ul class="flex-row-center">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="contact.html"  class="active-menu">Contact</a></li>
+          <li><a class="cp-btn" href="tel:0795717545">GET FREE CONSULTANT</a></li>
+        </ul>
+      </div>
+      <div class="phone-menu" id="phone-menu">
+        <i class="fas fa-bars" id="bar-icon"></i>
+        <i class="fas fa-times" id="close-icon"></i>
+      </div>
+    </div>
+  </navbar>
+
+  <!-- responsive-menu -->
+  <div id="small-screen-menu" class="small-screen-menu">
+    <a href="" id="close-menu"></i></a>
+    <div class="small-screen-content">
+      <ul>
+        <!-- <img src="code-park1.png" alt="" width="50px"> -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="cp-btn cp-btn-small" href="tel:0795717545">GET FREE CONSULTANT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- inside-cp-showcase -->
+  <div id="inside-showcase">
+    <div class="inside-showcase-content flex-column-center">
+      <div class="inside-show-heading">
+        <h2>CONTACT US</h2>
+      </div>
+      <div class="heading-border">
+        <div class="border-bottom"></div>
+      </div>
+      <div class="inside-show-descrip">
+        <p>PLEASE GET IN TOUCH WITH ANY QUESTIONS YOU MAY HAVE OR TO DISCUSS YOUR PROJECT.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- contacts -->
+  <div id="contact">
+    <div class="contact-content flex-row-center">
+      <div class="contacts flex-column-center">
+        <div class="contact-heading">
+          <h2 class="heading-3">OUR STATION</h2>
+          <div class="heading-border">
+            <div class="border-bottom"></div>
+          </div>
+        </div>
+        <div class="our-location location-item">
+          <i class="fas fa-city"></i>
+          <p>Code Park Company Limited</p>
+          <p>Nairobi, Kenya</p>
+        </div>
+        <div class="our-phone location-item">
+          <i class="fas fa-mobile-alt"></i>
+          <p>Tel: (+254) 795 717 545</p>
+        </div>
+        <div class="our-email location-item">
+          <i class="far fa-envelope"></i>
+          <p>Email: info@codepark.co.ke</p>
+        </div>
+      </div>
+      <div class="contact-image">
+        <img src="station.jpg" alt="Our-work-station-image">
+      </div>
+    </div>
+  </div>
+
+  <!-- message -->
+  <div id="message">
+    <div class="message-content flex-column-center">
+      <div class="message-heading">
+        <h2 class="heading-3">TALK TO US</h2>
+        <div class="heading-border">
+          <div class="border-bottom"></div>
+        </div>
+      </div>
+      <p>Contact us with any questions you may have or to discuss how we can help with your project.</p>
+      <form action="" id="contact-form" method="post">
+        <div class="form-content">
+          <label for="name">Name:</label>
+          <input id="name" type="text" name="name" placeholder="John Doe"> 
+        </div>
+        <div class="form-content">
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="data" placeholder="john@doe.com">
+        </div>
+        <div class="form-content">
+          <label for="phone">Phone:</label>
+          <input id="phone" type="number" name="phone" placeholder="(+254) 123 456789">
+        </div>
+        <div class="form-content">
+          <label for="message">Your message</label>
+          <textarea name="message" id="message" cols="25" rows="10" placeholder="Type your message..."></textarea>
+        </div>
+        <div class="form-content">
+          <input type="submit" name="submit" id="submit" value="SUBMIT">
+        </div>
+        <div id="not"></div>
+
+      </form>
+    </div>
+  </div>
+ 
+  <!-- results -->
+  <div id="results">
+    <p class="resul"></p>
+  </div>
+
+  <!-- footer -->
+  <div id="footer">
+    <div class="footer-content">
+      <div class="foot-one">
+        <p>A creative agency in Nairobi</p>
+        <div class="foot-contact">
+          <a href="info@codepark.com">info@codepark.co.ke</a>
+          <a href="tel:0795717545">(+254) 795 717545</a>
+        </div>
+        <p>Nairobi, Kenya</p>
+        <p class="copyright">Copyright <script>document.write(new Date().getFullYear());</script> Code Park</p>
+        <p style="color: grey;">All rights reserved.</p>
+      </div>
+      <div class="foot-two">
+        <a href="index.html"><img src="code-park-full-web1-grey.png" alt="codepark logo" /></a>
+      </div>
+
+    </div>
+  </div>
+
+<script src="app5.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

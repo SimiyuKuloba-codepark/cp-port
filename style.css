@@ -1,0 +1,339 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* utilities */
+:root{
+  --primary-font:'Poppins', sans-serif;
+  --primary-dark-color: #042442;
+  --primary-light-color: #1E90FF;
+  --background-primary: rgba(175, 193, 202, 0.96);
+  --background-primary1:   rgba(47, 53, 56, 0.8);
+  --background-purple:   rgba(8, 94, 253, 0.7);
+  --background-green: rgba(8, 253, 90, 0.7);
+}
+
+body{
+  font-family: var(--primary-font);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.active-menu{
+  color: var(--primary-light-color) !important;
+  border-bottom: 2px solid var(--primary-light-color) !important;
+  transition: 5s !important;
+}
+
+.heading-span{
+  font-size: 2.5rem;
+  padding-right: .8rem;
+}
+
+.grey-bg{
+  background: rgb(228, 225, 225);
+}
+
+.flex-column-center{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-row-center{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-border{
+  padding: 1rem 0rem;
+}
+
+.heading-3{
+  font-size: 2rem;
+  font-family: Arial;
+}
+
+.border-bottom{
+  border: 2px solid var(--primary-light-color);
+  width: 4rem;
+  margin: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.read-more{
+  padding: 3rem 0rem;
+}
+
+.more-links{
+  /* background: var(--primary-light-color); */
+  padding: .5rem 1.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid var(--primary-light-color);
+  transition: 1s
+}
+
+.sweep-to-right{
+  position: relative;
+  transform: translateZ(0);
+  transition: color 1000ms;
+}
+
+
+/* button-animation */
+.sweep-to-right:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-light-color);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition: 500ms ease-out;
+} 
+
+
+.sweep-to-right:hover:before{
+    transform: scaleX(1);
+}  
+
+.cp-btn{
+  background: var(--primary-light-color);
+  padding: .8rem 1rem;
+  border-radius: .5rem;
+  color: #fff;
+  transition: 1s;
+}
+
+.cp-btn:hover{
+  background: rgb(3, 101, 139);
+  cursor: pointer;
+  border: none !important;
+  color: #fff !important;
+}
+
+
+/* cp-navbar */
+#cp-navbar .cp-navbar-content{
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  height: 12vh;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 0rem 5rem;
+}
+
+
+#cp-navbar .cp-navbar-content .cp-logo .logo{
+  height: 100%;
+  width: 300px;
+}
+
+#cp-navbar .cp-navbar-content .cp-menu ul{
+  display: flex;
+}
+
+#cp-navbar .cp-navbar-content .cp-menu ul li{
+  list-style: none;
+}
+
+#cp-navbar .cp-navbar-content .cp-menu ul li a{
+  color: black;
+  font-weight: bold;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+#cp-navbar .cp-navbar-content .cp-menu ul li a:hover{
+  color: var(--primary-light-color);
+  border-bottom: 2px solid var(--primary-light-color);
+}
+
+/* responsive-menu */
+.small-screen-menu{
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  top: 5;
+  left: 0;
+  z-index: 3;
+  background-color: var(--background-primary);
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.small-screen-menu .small-screen-content{
+  position: relative;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.small-screen-menu .small-screen-content ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.small-screen-menu .small-screen-content ul li{
+  list-style: none;
+  padding-top: 2rem;
+}
+
+.small-screen-menu .small-screen-content ul li a{
+  color: black;
+  font-weight: bold;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.small-screen-menu .small-screen-content ul li a:hover{
+  color: var(--primary-light-color);
+  border-bottom: 2px solid var(--primary-light-color);
+}
+
+
+/* phone-menu */
+.phone-menu{
+  display: flex;
+  flex-direction: column;
+}
+
+#phone-menu{
+  display: none;
+}
+
+/* inside-cp-showcase */
+#inside-showcase{
+  background: var(--background-primary1);
+  color: #fff;
+  height: 75vh;
+  position: relative;
+}
+
+#inside-showcase:before{
+  content: "";
+  background: url('contact-us.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#inside-showcase .inside-showcase-content .inside-show-heading h2{
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+#inside-showcase .inside-showcase-content .inside-show-descrip p{
+  font-size: 1.3rem;
+}
+
+
+/* Footer */
+#footer{
+  background: black;
+  height: 40vh;
+}
+
+#footer .footer-content{
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  text-align: left;
+}
+
+#footer .foot-one{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  text-align: right;
+}
+
+#footer .foot-one p{
+  color: #fff;
+}
+
+#footer .footer-content .foot-one .foot-contact{
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer .foot-one .foot-contact a{
+  color: #fff;
+  padding: 0rem 0rem 0rem 1rem;
+  text-decoration: underline;
+}
+
+#footer .foot-one .copyright{
+  color: gray;
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+#footer .foot-two a img{
+  width: 400px;
+}
+
+/* ALERTS*/
+.alert{
+  font-size: .7rem;
+  padding: .3rem .5rem;
+  color: #fff !important;
+  text-align: center;
+  background: rgb(245, 84, 84) !important;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+/* priority-colors */
+.error{ background: rgb(245, 84, 84) !important; z-index: 2;}
+
+.success{ background: #28a745 !important; z-index: 2; }

@@ -1,0 +1,143 @@
+#inside-service{
+  background: var(--background-primary1);
+  color: #fff;
+  height: 75vh;
+  position: relative;
+}
+
+#inside-service:before{
+  content: "";
+  background: url('service.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#inside-service .inside-showcase-content .inside-show-heading h2{
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+#inside-service .inside-showcase-content .inside-show-descrip p{
+  font-size: 1.3rem;
+}
+
+/* service-details */
+#service .service-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 4rem 0rem;
+}
+
+#service .service-container .service-summary{
+  padding: 0rem 15rem;
+  display: flex;
+  text-align: justify;
+}
+
+/* service-packages */
+#service .service-container .service-packages{
+  padding: 5rem 0rem;
+}
+
+#service .service-container .service-packages .service-packages-container{
+  display: flex;
+}
+
+#service .service-container .service-packages .service-packages-container .package{
+  margin: 2rem;
+  box-shadow: 10px 10px 5px rgb(187, 185, 185);
+}
+
+#service .service-container .service-packages .service-packages-container .package .package-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+/* package-heading */
+#service .service-container .service-packages .service-packages-container .package .package-container .package-heading{
+  padding-bottom: 5rem;
+}
+
+#service .service-container .service-packages .service-packages-container .package .package-container .package-heading h2{
+  font-size: 5rem;
+}
+
+/* package-price */
+#service .service-container .service-packages .service-packages-container .package .package-container .package-price{
+  padding-bottom: 2rem;
+}
+
+/* package-link */
+#service .service-container .service-packages .service-packages-container .package .package-container .package-link a{
+  background: #fff;
+  padding: .5rem 1rem;
+  font-weight: bold;
+}
+
+/* micro box */
+#service .service-container .service-packages .service-packages-container .micro{
+  background: rgba(43, 2, 11, 0.85);
+  position: relative;
+  padding: 0rem 2.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#service .service-container .service-packages .service-packages-container .micro:before{
+  content: "";
+  background: url('micro.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* lite box */
+#service .service-container .service-packages .service-packages-container .lite{
+  background: rgba(2, 31, 43, 0.85);
+  position: relative;
+}
+
+#service .service-container .service-packages .service-packages-container .lite:before{
+  content: "";
+  background: url('lite.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* pro box */
+#service .service-container .service-packages .service-packages-container .pro{
+  background: rgba(2, 43, 18, 0.8);
+  position: relative;
+}
+
+#service .service-container .service-packages .service-packages-container .pro:before{
+  content: "";
+  background: url('pro.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

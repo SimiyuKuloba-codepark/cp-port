@@ -1,0 +1,95 @@
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#register{
+    background-image: linear-gradient(to right, rgba(255, 0, 128, 0.466), rgba(0, 255, 55, 0.466));
+    color: #ffffff;
+    height: 100vh;
+    position: relative;
+}
+  
+#register:before{
+    content: "";
+    background: url('bird.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#register .register-container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#register .register-container .register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    padding: 1rem 4rem;
+    background: rgb(253, 253, 253);
+    border-radius: 1rem;
+    color: black;
+}
+
+#register .register-container .register-form i{
+    font-size: 2rem;
+}
+
+#register .register-container .register-form h2{
+    color: rgb(97, 10, 54);
+    font-weight: bolder;
+}
+
+#register .register-container .register-form p{
+    padding-top: .5em;
+}
+
+#register .register-container .register-form form .form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#register .register-container .register-form form .form-content input{
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    padding: .8rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: rgb(102, 7, 66);
+}
+
+#register .register-container .register-form form .form-content input:focus{
+    outline: none;
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+}
+
+#register .register-container .register-form form .form-content label{
+    padding-top: .8rem;
+}
+
+#register .register-container .register-form form .form-content .submit{
+    background: rgb(97, 10, 54);
+    color: #fff;
+}
+
+#register .register-container .register-form form .form-content .submit:hover{
+    cursor: pointer;
+    background: rgb(49, 5, 27);
+}
+
+
+
+

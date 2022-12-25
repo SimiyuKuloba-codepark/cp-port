@@ -1,0 +1,40 @@
+#thanks{
+    margin: 4rem 6rem;
+    box-shadow: 8px 8px 40px rgb(95, 95, 95);
+}
+
+#thanks .thanks-container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#thanks .thanks-container .thanks-image img{
+    width: 100%;
+    height: 80vh;
+}
+
+#thanks .thanks-container .thanks-content{
+    padding: 0rem 2rem;
+}
+
+#thanks .thanks-container .thanks-content h1{
+    font-size: 3rem;
+}
+
+#thanks .thanks-container .thanks-content .cheers{
+    padding-bottom: 1.5rem;
+}
+
+#thanks .thanks-container .thanks-content a{
+    background: rgb(235, 60, 60);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+#thanks .thanks-container .thanks-content a:hover{
+    background: rgb(163, 24, 24);
+}

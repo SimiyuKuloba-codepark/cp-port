@@ -1,0 +1,16 @@
+#about{
+  background: url('dot.jpg');
+}
+
+#about .about-content{
+  padding: 4rem 20rem;
+}
+
+#about .about-content .about-par{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
