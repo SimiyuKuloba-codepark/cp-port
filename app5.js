@@ -39,7 +39,7 @@ class UI{
     // timeout-after-3-seconds
     setTimeout(function(){
       document.querySelector('.alert').remove();
-    }, 115000);
+    }, 5000);
   }
 
   // CLEAR-FIELDS
