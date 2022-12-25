@@ -63,37 +63,37 @@
                         <div class="order-form-col">
                             <div class="form-content">
                                 <label for="name">Name:</label>
-                                <input id="name" type="text" name="name" placeholder="John Doe" value="<?php echo isset($_POST['name']) ? $name : ''; ?>" required>
+                                <input id="name" type="text" name="name" placeholder="John Doe" required>
                             </div>             
                             <div class="form-content">
                                 <label for="email">Email:</label>
-                                <input id="email" type="text" name="email" placeholder="john@doe.com" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" required>
+                                <input id="email" type="text" name="email" placeholder="john@doe.com"  required>
                             </div>  
                             <div class="form-content">
                                 <label for="phone">Phone:</label>
-                                <input id="phone" type="number" name="phone" placeholder="(+254)795 717 545" value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>" required>
+                                <input id="phone" type="number" name="phone" placeholder="(+254)795 717 545" required>
                             </div>            
         
                         </div>
                         <div class="order-form-col">
                             <div class="form-content">
                                 <label for="start">Preferred Start Date:</label>
-                                <input id="start" type="date" name="start" placeholder="dd/mm/yyyy" value="<?php echo isset($_POST['start']) ? $start : ''; ?>" required>
+                                <input id="start" type="date" name="start" placeholder="dd/mm/yyyy" required>
                             </div>            
                             <div class="form-content">
                                 <label for="end">Preferred End Date:</label>
-                                <input id="end" type="date" name="end" placeholder="dd/mm/yyyy" value="<?php echo isset($_POST['end']) ? $end : ''; ?>" required>
+                                <input id="end" type="date" name="end" placeholder="dd/mm/yyyy" required>
                             </div>            
                             <div class="form-content">
                                 <label for="budget">Your Budget Range:</label>
-                                <input id="budget" type="text" name="budget" placeholder="Ksh. xx to Ksh. yyy" value="<?php echo isset($_POST['budget']) ? $budget : ''; ?>" required>
+                                <input id="budget" type="text" name="budget" placeholder="Ksh. xx to Ksh. yyy" required>
                             </div>            
         
                         </div>
                     </div>
                     <div class="form-content">
                         <label for="message">How can we help?</label>
-                        <textarea name="message" id="" cols="10" rows="5" placeholder="Type your message..." required><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+                        <textarea name="message" id="" cols="10" rows="5" placeholder="Type your message..." required></textarea>
                     </div>  
                     <div class="form-content">
                         <input type="submit" name="submit" id="submit" value="SUBMIT">
