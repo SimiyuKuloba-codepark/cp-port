@@ -82,6 +82,7 @@
   font-weight: bolder;
   background: var(--primary-light-color) !important;
   color: #fff;
+  border: none;
 }
 
 #message #contact-form .form-content #submit:focus{
