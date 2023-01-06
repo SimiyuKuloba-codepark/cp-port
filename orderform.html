@@ -17,12 +17,9 @@
     <!-- order-form-stylesheet -->
     <link rel="stylesheet" href="orderform.css">
     <!-- php style -->
-    <link rel='stylesheet' type='text/css' href='style.php' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
     <!-- moble-tablets-stylesheet -->
     <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
-    <link rel="stylesheet" href="cont-style.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="cont-mobile.css">
-    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="cont-widescreen.css">
 </head>
 <body>
     <!-- order-navbar -->
@@ -58,42 +55,42 @@
                     <p>KINDLY FILL IN THE SHORT FORM BELOW AND ONE OF OUR TEAM MEMBERS WILL BE IN TOUCH WITH YOU.</p>
                 </div>
                 <!-- order-form -->
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="order-form" method='post'>
+                <form action="" id="order-form" method='post'>
                     <div class="order-form-columns">
                         <div class="order-form-col">
                             <div class="form-content">
                                 <label for="name">Name:</label>
-                                <input id="name" type="text" name="name" placeholder="John Doe" required>
+                                <input id="name" type="text" name="name" placeholder="John Doe">
                             </div>             
                             <div class="form-content">
                                 <label for="email">Email:</label>
-                                <input id="email" type="text" name="email" placeholder="john@doe.com"  required>
+                                <input id="email" type="text" name="email" placeholder="john@doe.com">
                             </div>  
                             <div class="form-content">
                                 <label for="phone">Phone:</label>
-                                <input id="phone" type="number" name="phone" placeholder="(+254)795 717 545" required>
+                                <input id="phone" type="number" name="phone" placeholder="(+254)795 717 545">
                             </div>            
         
                         </div>
                         <div class="order-form-col">
                             <div class="form-content">
                                 <label for="start">Preferred Start Date:</label>
-                                <input id="start" type="date" name="start" placeholder="dd/mm/yyyy" required>
+                                <input id="start" type="date" name="start" placeholder="dd/mm/yyyy">
                             </div>            
                             <div class="form-content">
                                 <label for="end">Preferred End Date:</label>
-                                <input id="end" type="date" name="end" placeholder="dd/mm/yyyy" required>
+                                <input id="end" type="date" name="end" placeholder="dd/mm/yyyy">
                             </div>            
                             <div class="form-content">
                                 <label for="budget">Your Budget Range:</label>
-                                <input id="budget" type="text" name="budget" placeholder="Ksh. xx to Ksh. yyy" required>
+                                <input id="budget" type="text" name="budget" placeholder="Ksh. xx to Ksh. yyy">
                             </div>            
         
                         </div>
                     </div>
                     <div class="form-content">
                         <label for="message">How can we help?</label>
-                        <textarea name="message" id="" cols="10" rows="5" placeholder="Type your message..." required></textarea>
+                        <textarea name="message" id="" cols="10" rows="5" placeholder="Type your message..."></textarea>
                     </div>  
                     <div class="form-content">
                         <input type="submit" name="submit" id="submit" value="SUBMIT">
@@ -122,6 +119,7 @@
 
     </div>
     </div>
-    <script src="package.js"></script> 
+    <script src="app3.js"></script>
+
 </body>
 </html>
