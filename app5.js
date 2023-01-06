@@ -55,7 +55,7 @@ class UI{
 
 
 // EVENT-LISTENERS-FOR-GET-MESSAGE
-document.getElementById('contact-form').addEventListener('submit', function(e){
+document.getElementById('contact-form').addEventListener('submit', function(){
 
   // get-form-values
   const name = document.getElementById('name').value;
@@ -82,6 +82,5 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
     ui.clearFields();
   }
 
-  e.preventDefault();
 })
 
