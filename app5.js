@@ -83,9 +83,5 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
   }
 
   e.preventDefault();
-<<<<<<< HEAD
 })
 
-=======
-})
->>>>>>> 68ae570a1ce56e5d385aa2e0b2da465f1cf3bdb8
